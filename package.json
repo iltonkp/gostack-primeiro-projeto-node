@@ -1,0 +1,10 @@
+{
+  "name": "gostack-primeiro-projeto-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/iltonkp/gostack-primeiro-projeto-node.git",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  }
+}
