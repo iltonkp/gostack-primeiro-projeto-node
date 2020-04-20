@@ -8,6 +8,7 @@ const appointmentsRepository = new AppoitmentsRepository();
 
 appointmentsRouter.get('/', (request, response) => {
   const appointments = appointmentsRepository.all();
+
   return response.json(appointments);
 });
 
@@ -25,7 +26,10 @@ appointmentsRouter.post('/', (request, response) => {
       .status(400)
       .json({ mensage: 'This appointment is already booked' });
   }
-  const appointment = appointmentsRepository.create(provider, parsedDate);
+  const appointment = appointmentsRepository.create({
+    provider,
+    date: parsedDate,
+  });
 
   return response.json(appointment);
 });
